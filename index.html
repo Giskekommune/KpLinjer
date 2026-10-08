@@ -38,10 +38,11 @@
         <script src="js/leaflet.photon.js"></script>
         <script src="data/KpSamferdselLinje_1.js"></script>
         <script src="data/KpPskrift_text_2.js"></script>
+        <script src="data/KpJuridiskLinje_3.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[62.53673328004756,5.949929131630399],[62.60557556035554,6.180688638923953]]);
+        }).fitBounds([[62.48707439551928,6.079971183018621],[62.52157288606551,6.195350936666433]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -359,6 +360,76 @@
         });
         bounds_group.addLayer(layer_KpPskrift_text_2);
         map.addLayer(layer_KpPskrift_text_2);
+        function pop_KpJuridiskLinje_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['FØRSTEDIGI'] !== null ? autolinker.link(String(feature.properties['FØRSTEDIGI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['IDENT_LOKA'] !== null ? autolinker.link(String(feature.properties['IDENT_LOKA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['IDENT_NAVN'] !== null ? autolinker.link(String(feature.properties['IDENT_NAVN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['KPJURLINJE'] !== null ? autolinker.link(String(feature.properties['KPJURLINJE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['KVALITET_M'] !== null ? autolinker.link(String(feature.properties['KVALITET_M']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['KVALITET_N'] !== null ? autolinker.link(String(feature.properties['KVALITET_N']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NASJONALAR'] !== null ? autolinker.link(String(feature.properties['NASJONALAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NASJONAL00'] !== null ? autolinker.link(String(feature.properties['NASJONAL00']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fme_basena'] !== null ? autolinker.link(String(feature.properties['fme_basena']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fme_datase'] !== null ? autolinker.link(String(feature.properties['fme_datase']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LENGDE'] !== null ? autolinker.link(String(feature.properties['LENGDE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_KpJuridiskLinje_3_0() {
+            return {
+                pane: 'pane_KpJuridiskLinje_3',
+                opacity: 1,
+                color: 'rgba(13,12,243,1.0)',
+                dashArray: '3.0,6.0',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_KpJuridiskLinje_3');
+        map.getPane('pane_KpJuridiskLinje_3').style.zIndex = 403;
+        map.getPane('pane_KpJuridiskLinje_3').style['mix-blend-mode'] = 'normal';
+        var layer_KpJuridiskLinje_3 = new L.geoJson(json_KpJuridiskLinje_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_KpJuridiskLinje_3',
+            layerName: 'layer_KpJuridiskLinje_3',
+            pane: 'pane_KpJuridiskLinje_3',
+            onEachFeature: pop_KpJuridiskLinje_3,
+            style: style_KpJuridiskLinje_3_0,
+        });
+        bounds_group.addLayer(layer_KpJuridiskLinje_3);
+        map.addLayer(layer_KpJuridiskLinje_3);
         const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
@@ -413,6 +484,8 @@
             }
         });
         var overlaysTree = [
+        {label: '<b>Byggegrense mot sjø</b>',  selectAllCheckbox: true, children: [
+            {label: '<img src="legend/KpJuridiskLinje_3.png" /> KpJuridiskLinje', layer: layer_KpJuridiskLinje_3},]},
         {label: '<b>Samferdsel planforslag</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/KpPskrift_text_2.png" /> KpPåskrift_text', layer: layer_KpPskrift_text_2},
             {label: 'KpSamferdselLinje<br /><table><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Hovudveg0.png" /></td><td>Hovudveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Samleveg1.png" /></td><td>Samleveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangsykkelveg2.png" /></td><td>Gang- sykkelveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangveg3.png" /></td><td>Gangveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Turvegturdrag4.png" /></td><td>Turveg/turdrag</td></tr></table>', layer: layer_KpSamferdselLinje_1},]},
