@@ -41,7 +41,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[62.45459408812843,5.812503715516104],[62.59249882812142,6.259039022184775]]);
+        }).fitBounds([[62.53673328004756,5.949929131630399],[62.60557556035554,6.180688638923953]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -130,43 +130,43 @@
         function pop_KpSamferdselLinje_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td class="visible-with-data" id="AREALST" colspan="2"><strong>AREALST</strong><br />' + (feature.properties['AREALST'] !== null ? autolinker.link(String(feature.properties['AREALST']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['AREALST'] !== null ? autolinker.link(String(feature.properties['AREALST']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="FØRSTEDIGI" colspan="2"><strong>FØRSTEDIGI</strong><br />' + (feature.properties['FØRSTEDIGI'] !== null ? autolinker.link(String(feature.properties['FØRSTEDIGI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['FØRSTEDIGI'] !== null ? autolinker.link(String(feature.properties['FØRSTEDIGI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="IDENT_LOKA" colspan="2"><strong>IDENT_LOKA</strong><br />' + (feature.properties['IDENT_LOKA'] !== null ? autolinker.link(String(feature.properties['IDENT_LOKA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['IDENT_LOKA'] !== null ? autolinker.link(String(feature.properties['IDENT_LOKA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="IDENT_NAVN" colspan="2"><strong>IDENT_NAVN</strong><br />' + (feature.properties['IDENT_NAVN'] !== null ? autolinker.link(String(feature.properties['IDENT_NAVN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['IDENT_NAVN'] !== null ? autolinker.link(String(feature.properties['IDENT_NAVN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="KVALITET_M" colspan="2"><strong>KVALITET_M</strong><br />' + (feature.properties['KVALITET_M'] !== null ? autolinker.link(String(feature.properties['KVALITET_M']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['KVALITET_M'] !== null ? autolinker.link(String(feature.properties['KVALITET_M']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="KVALITET_N" colspan="2"><strong>KVALITET_N</strong><br />' + (feature.properties['KVALITET_N'] !== null ? autolinker.link(String(feature.properties['KVALITET_N']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['KVALITET_N'] !== null ? autolinker.link(String(feature.properties['KVALITET_N']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="NASJONALAR" colspan="2"><strong>NASJONALAR</strong><br />' + (feature.properties['NASJONALAR'] !== null ? autolinker.link(String(feature.properties['NASJONALAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['NASJONALAR'] !== null ? autolinker.link(String(feature.properties['NASJONALAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="NASJONAL00" colspan="2"><strong>NASJONAL00</strong><br />' + (feature.properties['NASJONAL00'] !== null ? autolinker.link(String(feature.properties['NASJONAL00']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['NASJONAL00'] !== null ? autolinker.link(String(feature.properties['NASJONAL00']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="TYPESAMFLI" colspan="2"><strong>TYPESAMFLI</strong><br />' + (feature.properties['TYPESAMFLI'] !== null ? autolinker.link(String(feature.properties['TYPESAMFLI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['TYPESAMFLI'] !== null ? autolinker.link(String(feature.properties['TYPESAMFLI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="VERTNIV" colspan="2"><strong>VERTNIV</strong><br />' + (feature.properties['VERTNIV'] !== null ? autolinker.link(String(feature.properties['VERTNIV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['VERTNIV'] !== null ? autolinker.link(String(feature.properties['VERTNIV']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="fme_basena" colspan="2"><strong>fme_basena</strong><br />' + (feature.properties['fme_basena'] !== null ? autolinker.link(String(feature.properties['fme_basena']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['fme_basena'] !== null ? autolinker.link(String(feature.properties['fme_basena']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="fme_datase" colspan="2"><strong>fme_datase</strong><br />' + (feature.properties['fme_datase'] !== null ? autolinker.link(String(feature.properties['fme_datase']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['fme_datase'] !== null ? autolinker.link(String(feature.properties['fme_datase']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="LENGDE" colspan="2"><strong>LENGDE</strong><br />' + (feature.properties['LENGDE'] !== null ? autolinker.link(String(feature.properties['LENGDE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['LENGDE'] !== null ? autolinker.link(String(feature.properties['LENGDE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -182,7 +182,7 @@
                     return {
                 pane: 'pane_KpSamferdselLinje_1',
                 opacity: 1,
-                color: 'rgba(39,78,214,1.0)',
+                color: 'rgba(183,19,57,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -195,7 +195,7 @@
                     return {
                 pane: 'pane_KpSamferdselLinje_1',
                 opacity: 1,
-                color: 'rgba(60,160,218,1.0)',
+                color: 'rgba(255,127,0,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -208,7 +208,7 @@
                     return {
                 pane: 'pane_KpSamferdselLinje_1',
                 opacity: 1,
-                color: 'rgba(202,46,217,1.0)',
+                color: 'rgba(202,42,217,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -221,7 +221,7 @@
                     return {
                 pane: 'pane_KpSamferdselLinje_1',
                 opacity: 1,
-                color: 'rgba(251,139,213,1.0)',
+                color: 'rgba(228,138,216,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -262,58 +262,58 @@
         function pop_KpPskrift_text_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td class="visible-with-data" id="FØRSTEDIGI" colspan="2"><strong>FØRSTEDIGI</strong><br />' + (feature.properties['FØRSTEDIGI'] !== null ? autolinker.link(String(feature.properties['FØRSTEDIGI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['FØRSTEDIGI'] !== null ? autolinker.link(String(feature.properties['FØRSTEDIGI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="IDENT_LOKA" colspan="2"><strong>IDENT_LOKA</strong><br />' + (feature.properties['IDENT_LOKA'] !== null ? autolinker.link(String(feature.properties['IDENT_LOKA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['IDENT_LOKA'] !== null ? autolinker.link(String(feature.properties['IDENT_LOKA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="IDENT_NAVN" colspan="2"><strong>IDENT_NAVN</strong><br />' + (feature.properties['IDENT_NAVN'] !== null ? autolinker.link(String(feature.properties['IDENT_NAVN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['IDENT_NAVN'] !== null ? autolinker.link(String(feature.properties['IDENT_NAVN']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="KVALITET_M" colspan="2"><strong>KVALITET_M</strong><br />' + (feature.properties['KVALITET_M'] !== null ? autolinker.link(String(feature.properties['KVALITET_M']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['KVALITET_M'] !== null ? autolinker.link(String(feature.properties['KVALITET_M']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="KVALITET_N" colspan="2"><strong>KVALITET_N</strong><br />' + (feature.properties['KVALITET_N'] !== null ? autolinker.link(String(feature.properties['KVALITET_N']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['KVALITET_N'] !== null ? autolinker.link(String(feature.properties['KVALITET_N']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="NASJONALAR" colspan="2"><strong>NASJONALAR</strong><br />' + (feature.properties['NASJONALAR'] !== null ? autolinker.link(String(feature.properties['NASJONALAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['NASJONALAR'] !== null ? autolinker.link(String(feature.properties['NASJONALAR']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="NASJONAL00" colspan="2"><strong>NASJONAL00</strong><br />' + (feature.properties['NASJONAL00'] !== null ? autolinker.link(String(feature.properties['NASJONAL00']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['NASJONAL00'] !== null ? autolinker.link(String(feature.properties['NASJONAL00']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="PLANPÅSKRI" colspan="2"><strong>PLANPÅSKRI</strong><br />' + (feature.properties['PLANPÅSKRI'] !== null ? autolinker.link(String(feature.properties['PLANPÅSKRI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['PLANPÅSKRI'] !== null ? autolinker.link(String(feature.properties['PLANPÅSKRI']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="STRENG" colspan="2"><strong>STRENG</strong><br />' + (feature.properties['STRENG'] !== null ? autolinker.link(String(feature.properties['STRENG']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['STRENG'] !== null ? autolinker.link(String(feature.properties['STRENG']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="fme_basena" colspan="2"><strong>fme_basena</strong><br />' + (feature.properties['fme_basena'] !== null ? autolinker.link(String(feature.properties['fme_basena']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['fme_basena'] !== null ? autolinker.link(String(feature.properties['fme_basena']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="fme_datase" colspan="2"><strong>fme_datase</strong><br />' + (feature.properties['fme_datase'] !== null ? autolinker.link(String(feature.properties['fme_datase']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['fme_datase'] !== null ? autolinker.link(String(feature.properties['fme_datase']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="_original_" colspan="2"><strong>_original_</strong><br />' + (feature.properties['_original_'] !== null ? autolinker.link(String(feature.properties['_original_']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['_original_'] !== null ? autolinker.link(String(feature.properties['_original_']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="X" colspan="2"><strong>X</strong><br />' + (feature.properties['X'] !== null ? autolinker.link(String(feature.properties['X']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['X'] !== null ? autolinker.link(String(feature.properties['X']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Y" colspan="2"><strong>Y</strong><br />' + (feature.properties['Y'] !== null ? autolinker.link(String(feature.properties['Y']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Y'] !== null ? autolinker.link(String(feature.properties['Y']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Z" colspan="2"><strong>Z</strong><br />' + (feature.properties['Z'] !== null ? autolinker.link(String(feature.properties['Z']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Z'] !== null ? autolinker.link(String(feature.properties['Z']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="TEXTSTRING" colspan="2"><strong>TEXTSTRING</strong><br />' + (feature.properties['TEXTSTRING'] !== null ? autolinker.link(String(feature.properties['TEXTSTRING']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['TEXTSTRING'] !== null ? autolinker.link(String(feature.properties['TEXTSTRING']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="TEXT_ANGLE" colspan="2"><strong>TEXT_ANGLE</strong><br />' + (feature.properties['TEXT_ANGLE'] !== null ? autolinker.link(String(feature.properties['TEXT_ANGLE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['TEXT_ANGLE'] !== null ? autolinker.link(String(feature.properties['TEXT_ANGLE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="TEXT_SIZE" colspan="2"><strong>TEXT_SIZE</strong><br />' + (feature.properties['TEXT_SIZE'] !== null ? autolinker.link(String(feature.properties['TEXT_SIZE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['TEXT_SIZE'] !== null ? autolinker.link(String(feature.properties['TEXT_SIZE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -326,7 +326,7 @@
         function style_KpPskrift_text_2_0() {
             return {
                 pane: 'pane_KpPskrift_text_2',
-                radius: 4.0,
+                radius: 2.8,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -335,8 +335,8 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(190,178,151,1.0)',
-                interactive: false,
+                fillColor: 'rgba(92,85,85,1.0)',
+                interactive: true,
             }
         }
         map.createPane('pane_KpPskrift_text_2');
@@ -344,7 +344,7 @@
         map.getPane('pane_KpPskrift_text_2').style['mix-blend-mode'] = 'normal';
         var layer_KpPskrift_text_2 = new L.geoJson(json_KpPskrift_text_2, {
             attribution: '',
-            interactive: false,
+            interactive: true,
             dataVar: 'json_KpPskrift_text_2',
             layerName: 'layer_KpPskrift_text_2',
             pane: 'pane_KpPskrift_text_2',
@@ -415,7 +415,7 @@
         var overlaysTree = [
         {label: '<b>Samferdsel planforslag</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/KpPskrift_text_2.png" /> KpPåskrift_text', layer: layer_KpPskrift_text_2},
-            {label: 'KpSamferdselLinje<br /><table><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Hovudtrase0.png" /></td><td>Hovudtrase</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Samletrase1.png" /></td><td>Samletrase</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangveg2.png" /></td><td>Gangveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangogsykkelveg3.png" /></td><td>Gang- og sykkelveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Turveg4.png" /></td><td>Turveg</td></tr></table>', layer: layer_KpSamferdselLinje_1},]},
+            {label: 'KpSamferdselLinje<br /><table><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Hovudveg0.png" /></td><td>Hovudveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Samleveg1.png" /></td><td>Samleveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangsykkelveg2.png" /></td><td>Gang- sykkelveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Gangveg3.png" /></td><td>Gangveg</td></tr><tr><td style="text-align: center;"><img src="legend/KpSamferdselLinje_1_Turvegturdrag4.png" /></td><td>Turveg/turdrag</td></tr></table>', layer: layer_KpSamferdselLinje_1},]},
             {label: "Topografisk norgeskart gråtone", layer: layer_Topografisknorgeskartgrtone_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
